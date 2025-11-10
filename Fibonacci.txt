@@ -1,0 +1,26 @@
+# Non-Recursive Fibonacci Program
+def fibonacci_non_recursive(n):
+    a, b = 0, 1
+    print(a, end=" ")
+    if n > 1:
+        print(b, end=" ")
+    for i in range(2, n):
+        c = a + b
+        print(c, end=" ")
+        a, b = b, c
+
+
+# Recursive Fibonacci Program
+def fibonacci_recursive(n):
+    if n <= 1:
+        return n
+    return fibonacci_recursive(n-1) + fibonacci_recursive(n-2)
+
+
+num = 10
+print("Non-Recursive Fibonacci:")
+fibonacci_non_recursive(num)
+
+print("\nRecursive Fibonacci:")
+for i in range(num):
+    print(fibonacci_recursive(i), end=" ")
